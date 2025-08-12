@@ -23,17 +23,18 @@ export const Overlay = styled.div`
 
 export const TaruMascot = styled.img`
   position: absolute;
-  right: 8px;
-  bottom: 120px;
-  width: 228px;
-  height: 254px;
+  top: 55%;
+  left: 80%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: auto;
   aspect-ratio: 114 / 127;
   flex-shrink: 0;
   object-fit: contain;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
   user-select: none;
   pointer-events: none;
-  z-index: 12;
+  z-index: 999;
 `;
 
 export const BubbleBox = styled.div`
@@ -48,20 +49,81 @@ export const BubbleBox = styled.div`
   backdrop-filter: blur(2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
   z-index: 10;
+  
 `;
 
 export const BubbleHeader = styled.div`
-  display: inline-flex;
+  position: absolute;
+  top: 566px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 344px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--color-neutral-whitegray, #F0F0F0);
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  background: #FFF;
-  color: #222;
-  border-radius: 12px;
-  padding: 8px 12px;
-  margin-bottom: 12px;
+  justify-content: left;
+  gap: 4px;
+  z-index: 15;
 
-  .name { font-weight: 700; color: #222; }
-  .role { color: #6B7280; }
+  .name {
+    color: var(--color-primary-purple, #271932);
+    text-align: center;
+    font-family: MaruBuriOTF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+  }
+
+  .role {
+    color: var(--color-neutral-black, #2A2A2A);
+    text-align: center;
+    font-family: MaruBuriOTF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: -0.5px;
+  }
+`;
+
+export const BubbleContent = styled.div`
+  position: absolute;
+
+  bottom: 0px;
+  width: 375px;
+  height: 205px;
+  flex-shrink: 0;
+  background: rgba(138, 138, 138, 0.40);
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .text {
+    font-family: MaruBuriOTF;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #FFFFFF;
+  }
+
+  .next-indicator {
+    align-self: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    user-select: none;
+  }
 `;
 
 export const ButtonPrev = styled.button`
