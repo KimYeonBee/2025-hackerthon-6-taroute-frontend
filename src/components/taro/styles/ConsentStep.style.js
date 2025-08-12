@@ -79,6 +79,22 @@ export const ButtonPrev = styled.button`
   text-align: center;
   backdrop-filter: blur(2px);
   z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &::before {
+    content: '‹';
+    font-size: 24px;
+    font-weight: bold;
+  }
 `;
 
 export const ButtonNext = styled.button`
@@ -96,6 +112,17 @@ export const ButtonNext = styled.button`
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #3a1f4a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
 `;
 
 

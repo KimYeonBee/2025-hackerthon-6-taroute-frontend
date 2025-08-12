@@ -8,6 +8,7 @@ import {
   ButtonNext,
 } from '../styles/ConsentStep.style.js'
 import taruSvg from '../../../assets/icons/taru.svg'
+import arrowSvg from '../../../assets/icons/arrow.svg'
 
 function ConsentStep({ next, prev }) {
   return (
@@ -28,8 +29,9 @@ function ConsentStep({ next, prev }) {
         </div>
       </BubbleBox>
 
-      <ButtonPrev type="button" aria-label="이전 단계" onClick={prev}>‹</ButtonPrev>
-      <ButtonNext type="button" aria-label="다음 단계" onClick={next}>›</ButtonNext>
+      <ButtonNext type="button" aria-label="다음 단계" onClick={next}>
+        <img src={arrowSvg} alt="다음" style={{ width: '24px', height: '24px' }} />
+      </ButtonNext>
     </Wrapper>
   )
 }
