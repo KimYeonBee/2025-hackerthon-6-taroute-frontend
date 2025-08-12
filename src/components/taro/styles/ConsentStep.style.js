@@ -23,10 +23,10 @@ export const Overlay = styled.div`
 
 export const TaruMascot = styled.img`
   position: absolute;
-  top: 55%;
+  top: 53%;
   left: 80%;
   transform: translateX(-50%);
-  width: 150px;
+  width: 180px;
   height: auto;
   aspect-ratio: 114 / 127;
   flex-shrink: 0;
@@ -54,7 +54,7 @@ export const BubbleBox = styled.div`
 
 export const BubbleHeader = styled.div`
   position: absolute;
-  top: 566px;
+  top: 560px;
   left: 50%;
   transform: translateX(-50%);
   width: 344px;
@@ -66,7 +66,8 @@ export const BubbleHeader = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  gap: 4px;
+  padding-left: 17px;
+  gap: 17px;
   z-index: 15;
 
   .name {
@@ -78,6 +79,7 @@ export const BubbleHeader = styled.div`
     font-weight: 700;
     line-height: 17px;
     letter-spacing: -0.5px;
+    
   }
 
   .role {
