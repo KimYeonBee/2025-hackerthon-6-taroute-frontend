@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import bgImage from '../../../assets/images/bg_1.jpg'
-import taruSvg from '../../../assets/icons/taru.svg'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -22,7 +21,7 @@ export const Overlay = styled.div`
   );
 `;
 
-export const TaruMascot = styled.div`
+export const TaruMascot = styled.img`
   position: absolute;
   right: 8px;
   bottom: 120px;
@@ -30,10 +29,11 @@ export const TaruMascot = styled.div`
   height: 254px;
   aspect-ratio: 114 / 127;
   flex-shrink: 0;
-  background: url(${taruSvg}) lightgray 50% / cover no-repeat;
+  object-fit: contain;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
   user-select: none;
   pointer-events: none;
+  z-index: 12;
 `;
 
 export const BubbleBox = styled.div`
@@ -47,6 +47,7 @@ export const BubbleBox = styled.div`
   padding: 16px;
   backdrop-filter: blur(2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 `;
 
 export const BubbleHeader = styled.div`
@@ -77,6 +78,7 @@ export const ButtonPrev = styled.button`
   line-height: 48px;
   text-align: center;
   backdrop-filter: blur(2px);
+  z-index: 20;
 `;
 
 export const ButtonNext = styled.button`
@@ -93,6 +95,7 @@ export const ButtonNext = styled.button`
   line-height: 56px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  z-index: 20;
 `;
 
 

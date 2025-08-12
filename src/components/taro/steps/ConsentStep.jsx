@@ -7,12 +7,13 @@ import {
   ButtonPrev,
   ButtonNext,
 } from '../styles/ConsentStep.style.js'
+import taruSvg from '../../../assets/icons/taru.svg'
 
 function ConsentStep({ next, prev }) {
   return (
     <Wrapper>
       <Overlay />
-      <TaruMascot aria-label="타루" role="img" />
+      <TaruMascot src={taruSvg} alt="타루" aria-label="타루" role="img" />
 
       <BubbleBox>
         <BubbleHeader>
