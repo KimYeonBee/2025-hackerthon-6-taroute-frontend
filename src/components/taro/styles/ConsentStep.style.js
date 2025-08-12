@@ -4,9 +4,11 @@ import bgImage from '../../../assets/images/bg_1.jpg'
 export const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
+  background-color: #000; /* 여백 검정색 */
   background-image: url(${bgImage});
-  background-size: cover;
+  background-size: contain;
   background-position: center top;
+  background-repeat: no-repeat; /* 반복 방지 */
   overflow: hidden;
 `;
 
